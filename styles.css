@@ -1,0 +1,174 @@
+html, body {
+    margin: 0;
+    padding: 8px;
+    width: 170px;
+    user-select: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+#main {
+    -webkit-app-region: drag;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #1cb5e0bb 0%, #000851bb 100%);
+    box-shadow: 2px 5px 8px #00000081;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.up-arrow {
+    border: solid #4ff02f;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 6px;
+    padding: 3px;
+    transform: rotate(-135deg);
+}
+
+.down-arrow {
+    border: solid #f0562f;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    margin-right: 6px;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.card {
+    background-color: #ffffff3d;
+    padding: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 4px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #22222262;
+}
+
+.card>span {
+    font-weight: bold;
+}
+
+#close-btn {
+    background-color: #4e4e4e87;
+    color: #fff;
+    border: none;
+    border-radius: 11px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#close-btn:hover {
+    background-color: #ff0000;
+}
+
+#min-btn:hover {
+    background-color: #4399fc;
+}
+
+#settings {
+    background-color: #4e4e4e87;
+    padding-top: 4px;
+    margin-left: 4px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#settings:hover {
+    background-color: #1c81e0;
+}
+
+#win-menu {
+    display: flex;
+    margin-bottom: 6px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#win-menu:hover {
+    opacity: 100%;
+    transition: all 0.3s;
+}
+
+#settings-menu {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.circle {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-top: 3px;
+    margin-left: 4px;
+    border: none;
+    border-radius: 25px;
+}
+
+#colors {
+    border-radius: 15px;
+    padding: 2px;
+    background-color: #ffffff2d;
+    margin-bottom: 8px;
+}
+
+#change-text {
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    left: 2px;
+    width: 25px;
+    height: 25px;
+    padding-left: 4px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+#today {
+    margin-top: 8px;
+    border-radius: 10px;
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-bottom: 10px;
+    color: #1c1c1c;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #ffffff81;
+    box-shadow: inset 0px 2px 6px 2px #000000e0;
+}
+
+#today h2 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#today-btn {
+    display: inline-block;
+    position: relative;
+    top: -6px;
+    left: 2px;
+    width: 27px;
+    height: 27px;
+    padding-left: 6px;
+    border: solid 1px #000;
+    background-color: #531a87;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: medium;
+    color: #fff;
+}

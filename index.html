@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet Speed Monitor</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div id="win-menu">
+      <button id="close-btn" onclick="closeWin()">X</button>
+      <!-- <button onclick="minWin()">_</button> -->
+      <button id="settings" onclick="settings()">
+        <img src="./settings.png" width="20" height="20" />
+      </button>
+    </div>
+
+    <div id="settings-menu">
+      <div id="colors">
+        <button
+          onclick="changeBackground(0)"
+          class="circle"
+          style="background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);"
+        ></button>
+        <button
+          onclick="changeBackground(1)"
+          class="circle"
+          style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);"
+        ></button>
+        <button
+          onclick="changeBackground(2)"
+          class="circle"
+          style="background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);"
+        ></button>
+        <button
+          onclick="changeBackground(3)"
+          class="circle"
+          style="background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);"
+        ></button>
+        <button
+          onclick="changeBackground(4)"
+          class="circle"
+          style="background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);"
+        ></button>
+        <button
+          onclick="changeBackground(5)"
+          class="circle"
+          style="background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);"
+        ></button>
+        <button
+          onclick="changeBackground(6)"
+          class="circle"
+          style="background: linear-gradient(90deg, #868686 0%, #000000 100%);"
+        ></button>
+        <button id="change-text" onclick="changeText()">T</button>
+        <button id="today-btn" onclick="toggleToday()">i</button>
+      </div>
+    </div>
+    <div id="main">
+      <div class="card"><i class="up-arrow"></i><span id="u_speed"></span></div>
+      <div class="card">
+        <i class="down-arrow"></i><span id="d_speed"></span>
+      </div>
+    </div>
+    <div id="today">
+      <h2>
+        Today
+      </h2>
+      Download: <span id="total-rec"></span>
+      <br />
+      Upload: <span id="total-sent"></span>
+    </div>
+    <script src="./core.js"></script>
+    <script src="./settings.js"></script>
+  </body>
+</html>
