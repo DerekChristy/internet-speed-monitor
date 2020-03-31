@@ -1,5 +1,7 @@
 # Internet Speed Monitor
 
+[website](https://derekchristy.github.io/internet-speed-monitor/)
+
 ## Run the project
 
 > npm install \
