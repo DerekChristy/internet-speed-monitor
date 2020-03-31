@@ -18,6 +18,7 @@
       justify-content: center;
       align-items: center;
       height: 100px;
+      min-width: 120px;
       border-radius: 15px;
       background: linear-gradient(180deg, #1cb5e0 0%, #000851 100%);
       box-shadow: 2px 5px 8px #00000081;
@@ -57,6 +58,7 @@
     }
     .card > span {
       font-weight: bold;
+      font-size: 0.8rem;
     }
     #main {
       position: absolute;
@@ -68,7 +70,7 @@
     }
     #container {
       position: relative;
-      top: 40%;
+      top: 25%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -87,11 +89,46 @@
     }
     #banner {
       position: relative;
-      top: 20%;
-
+      top: 15%;
       color: #fff;
       text-align: center;
       font-size: 2rem;
+    }
+    #download-btn {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #eee;
+      border-radius: 10px;
+      padding: 12px;
+      color: #222;
+      width: fit-content;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    #download-btn:hover {
+      box-shadow: 0px 0px 12px #000;
+      transition: all 0.3s;
+    }
+    #source-btn {
+      display: inline-block;
+      text-decoration: none;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 10px;
+      margin: 8px;
+      color: #eee;
+      width: fit-content;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    #source-btn:hover {
+      background-color: #eee;
+      color: #222;
+      transition: all 0.3s;
+    }
+    #left-block h1 {
+      margin-bottom: 36px;
     }
   </style>
   <body>
@@ -100,18 +137,44 @@
       <div id="container">
         <div id="left-block">
           <h1>Keep track of internet speed with a peep</h1>
+          <a
+            id="download-btn"
+            href="https://drive.google.com/file/d/1BYtg9oT7vQCflHlCGjzq6A1V50efgaXx/view?usp=sharing"
+            target="_blank"
+            >Download</a
+          >
+          <a
+            id="source-btn"
+            href="https://github.com/DerekChristy/internet-speed-monitor"
+            target="_blank"
+            >Source</a
+          >
         </div>
         <div id="right-block">
           <div id="app">
             <div class="card">
-              <i class="up-arrow"></i><span id="u_speed">0.00 Kb/s</span>
+              <i class="up-arrow"></i><span id="u_speed">00.0 Kb/s</span>
             </div>
             <div class="card">
-              <i class="down-arrow"></i><span id="d_speed">0.00 Kb/s</span>
+              <i class="down-arrow"></i><span id="d_speed">00.0 Kb/s</span>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      var us, ds;
+      window.onload = function() {
+        us = document.getElementById('u_speed');
+        ds = document.getElementById('d_speed');
+
+        setInterval(update, 1000);
+      };
+      function update() {
+        us.innerText = (Math.random() * 80 + 10).toFixed(1) + ' Kb/s';
+        ds.innerText = (Math.random() * 80 + 10).toFixed(1) + ' Kb/s';
+      }
+    </script>
   </body>
 </html>
