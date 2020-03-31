@@ -56,22 +56,41 @@
         <button id="change-text" onclick="changeText()">T</button>
         <button id="today-btn" onclick="toggleToday()">i</button>
       </div>
+      <div id="gradient-settings">
+        <input id="color-1" type="color" />
+        <input id="color-2" type="color" />
+        <input
+          id="angle"
+          type="number"
+          min="0"
+          max="360"
+          value="0"
+          placeholder="∠"
+        />
+        <button onclick="applyGradient()">OK</button>
+      </div>
+      <div id="opacity-settings">
+        <input id="opacity-range" value="85" type="range" min="0" max="100" />
+      </div>
     </div>
     <div id="main">
-      <div class="card"><i class="up-arrow"></i><span id="u_speed"></span></div>
       <div class="card">
-        <i class="down-arrow"></i><span id="d_speed"></span>
+        <i class="up-arrow"></i><span id="u_speed">0.00 Kb/s</span>
+      </div>
+      <div class="card">
+        <i class="down-arrow"></i><span id="d_speed">0.00 Kb/s</span>
       </div>
     </div>
     <div id="today">
       <h2>
         Today
       </h2>
-      Download: <span id="total-rec"></span>
+      Download: <span id="total-rec">0.00 Mb</span>
       <br />
-      Upload: <span id="total-sent"></span>
+      Upload: <span id="total-sent">0.00 Mb</span>
+      <br />
+      Max Speed: <span id="mSpeed">0.00 Kb/s</span>
     </div>
     <script src="./core.js"></script>
-    <script src="./settings.js"></script>
   </body>
 </html>

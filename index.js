@@ -5,8 +5,7 @@ let win = null;
 function boot() {
   console.log(process.type);
   win = new BrowserWindow({
-    maxWidth: 200,
-    maxHeight: 300,
+    //maxWidth: 200,
     minWidth: 200,
     minHeight: 170,
     useContentSize: true,

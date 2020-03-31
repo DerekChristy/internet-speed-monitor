@@ -9,6 +9,10 @@ button {
     cursor: pointer;
 }
 
+*:focus {
+    outline: none;
+}
+
 #main {
     -webkit-app-region: drag;
     display: flex;
@@ -17,10 +21,11 @@ button {
     align-items: center;
     height: 100px;
     border-radius: 15px;
-    background: linear-gradient(180deg, #1cb5e0bb 0%, #000851bb 100%);
+    background: linear-gradient(180deg, #1cb5e0 0%, #000851 100%);
     box-shadow: 2px 5px 8px #00000081;
     color: #fff;
     font-size: 1rem;
+    opacity: 85%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -92,7 +97,7 @@ button {
     display: flex;
     margin-bottom: 6px;
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.5s 1.5s;
 }
 
 #win-menu:hover {
@@ -117,6 +122,12 @@ button {
     margin-left: 4px;
     border: none;
     border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.circle:hover {
+    box-shadow: 0px 0px 7px #000;
+    transition: all 0.3s;
 }
 
 #colors {
@@ -129,13 +140,21 @@ button {
 #change-text {
     display: inline-block;
     position: relative;
-    top: -7px;
-    left: 2px;
+    top: -6px;
+    left: 3px;
     width: 25px;
     height: 25px;
+    padding-top: 3px;
     padding-left: 4px;
+    border: none;
     border-radius: 25px;
     font-weight: bold;
+    transition: all 0.3s;
+}
+
+#change-text:hover {
+    box-shadow: 0px 0px 7px #000;
+    transition: all 0.3s;
 }
 
 #today {
@@ -148,8 +167,7 @@ button {
     font-size: 0.8rem;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #ffffff81;
-    box-shadow: inset 0px 2px 6px 2px #000000e0;
+    background-color: #ffffff94;
 }
 
 #today h2 {
@@ -161,14 +179,107 @@ button {
     display: inline-block;
     position: relative;
     top: -6px;
-    left: 2px;
+    left: 6px;
     width: 27px;
     height: 27px;
     padding-left: 6px;
-    border: solid 1px #000;
     background-color: #531a87;
     border-radius: 25px;
     font-weight: bold;
     font-size: medium;
     color: #fff;
+    transition: all 0.3s;
+}
+
+#today-btn:hover {
+    box-shadow: 0px 0px 7px #000;
+    transition: all 0.3s;
+}
+
+#gradient-settings {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #ffffff2d;
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+}
+
+#gradient-settings button {
+    position: relative;
+    top: -3px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 3px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    padding-right: 7px;
+    color: #fff;
+    background-color: #1c81e0;
+    transition: all 0.3s;
+}
+
+#gradient-settings button:hover {
+    box-shadow: 0px 1px 5px #222;
+    transition: all 0.3s;
+}
+
+input[type="color"] {
+    width: 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    margin-left: 2px;
+    padding: 4px;
+    position: relative;
+    top: -3px;
+}
+
+#opacity-settings {
+    border-radius: 9px;
+    background-color: #ffffff2d;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 11px;
+    margin-bottom: 8px;
+}
+
+#opacity-range {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+#opacity-range:focus {
+    outline: none;
+}
+
+#opacity-range::-webkit-slider-runnable-track {
+    background: #2dbce0;
+    height: 3px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#opacity-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    border: 4px solid #2dbce0;
+    background-color: #172435;
+    cursor: pointer;
+    margin-top: -6px;
+    transition: all 0.3s;
+}
+
+#opacity-range::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 7px #000;
+    transition: all 0.3s;
 }
