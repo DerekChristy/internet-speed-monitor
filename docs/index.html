@@ -5,7 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internet Speed Monitor</title>
   </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #app {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      border-radius: 15px;
+      background: linear-gradient(180deg, #1cb5e0 0%, #000851 100%);
+      box-shadow: 2px 5px 8px #00000081;
+      color: #fff;
+      font-size: 1rem;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    }
+
+    .up-arrow {
+      border: solid #4ff02f;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      margin-top: 8px;
+      margin-right: 6px;
+      padding: 3px;
+      transform: rotate(-135deg);
+    }
+    .down-arrow {
+      border: solid #f02f2f;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      margin-right: 6px;
+      padding: 3px;
+      transform: rotate(45deg);
+      position: relative;
+      top: -2px;
+    }
+    .card {
+      background-color: #ffffff3d;
+      padding: 4px;
+      padding-left: 16px;
+      padding-right: 16px;
+      margin: 4px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 20px #22222262;
+    }
+    .card > span {
+      font-weight: bold;
+    }
+    #main {
+      position: absolute;
+      top: 0;
+      margin: 0;
+      width: 100%;
+      height: 80vh;
+      background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+    }
+    #container {
+      position: relative;
+      top: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    #left-block {
+      color: #fff;
+      width: 70%;
+      padding: 16px;
+    }
+    #right-block {
+      margin-left: 10%;
+      padding: 16px;
+      width: 30%;
+    }
+    #banner {
+      position: relative;
+      top: 20%;
+
+      color: #fff;
+      text-align: center;
+      font-size: 2rem;
+    }
+  </style>
   <body>
-    <h1>Internet Speed Monitor</h1>
+    <div id="main">
+      <div id="banner">Internet Speed Monitor</div>
+      <div id="container">
+        <div id="left-block">
+          <h1>Keep track of internet speed with a peep</h1>
+        </div>
+        <div id="right-block">
+          <div id="app">
+            <div class="card">
+              <i class="up-arrow"></i><span id="u_speed">0.00 Kb/s</span>
+            </div>
+            <div class="card">
+              <i class="down-arrow"></i><span id="d_speed">0.00 Kb/s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
