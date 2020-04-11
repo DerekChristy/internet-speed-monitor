@@ -6,3 +6,13 @@
 
 > npm install \
 > npm start
+
+### Create executables for Windows and mac using electron-builder
+
+#### Install electron-builder
+
+> npm i electron-builder -g \
+
+#### Build executable for current OS
+
+> electron-builder . --electron-version 8.2.0
