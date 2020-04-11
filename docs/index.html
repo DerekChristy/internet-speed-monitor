@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internet Speed Monitor</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+    />
   </head>
   <style>
     html,
@@ -11,6 +15,49 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .bmc-button img {
+      height: 34px !important;
+      width: 35px !important;
+      margin-bottom: 1px !important;
+      box-shadow: none !important;
+      border: none !important;
+      vertical-align: middle !important;
+    }
+    .bmc-button {
+      padding: 7px 10px 7px 10px !important;
+      line-height: 35px !important;
+      height: 51px !important;
+      min-width: 217px !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      color: #000000 !important;
+      background-color: #5fe96b !important;
+      border-radius: 5px !important;
+      border: 1px solid transparent !important;
+      padding: 7px 10px 7px 10px !important;
+      font-size: 28px !important;
+      letter-spacing: 0.6px !important;
+      box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+      -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+      margin: 0 auto !important;
+      font-family: 'Cookie', cursive !important;
+      -webkit-box-sizing: border-box !important;
+      box-sizing: border-box !important;
+      -o-transition: 0.3s all linear !important;
+      -webkit-transition: 0.3s all linear !important;
+      -moz-transition: 0.3s all linear !important;
+      -ms-transition: 0.3s all linear !important;
+      transition: 0.3s all linear !important;
+    }
+    .bmc-button:hover,
+    .bmc-button:active,
+    .bmc-button:focus {
+      -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+      text-decoration: none !important;
+      box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+      opacity: 0.85 !important;
+      color: #ffffff !important;
     }
     #app {
       display: flex;
@@ -130,6 +177,28 @@
     #left-block h1 {
       margin-bottom: 36px;
     }
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      height: 20vh;
+      background-color: #000;
+      padding: 8px;
+      width: 100vw;
+    }
+    footer p {
+      color: #eee;
+      font-weight: lighter;
+    }
+    footer p a {
+      color: #eee;
+      text-decoration: none;
+    }
+    footer p a:hover {
+      color: #ff5f5f;
+    }
   </style>
   <body>
     <div id="main">
@@ -162,10 +231,26 @@
         </div>
       </div>
     </div>
-
+    <footer>
+      <a
+        class="bmc-button"
+        target="_blank"
+        href="https://paypal.me/derekchristyjoseph"
+        ><img
+          src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+          alt="Buy me a coffee"
+        /><span style="margin-left: 15px; font-size: 28px !important;"
+          >Buy me a coffee</span
+        ></a
+      >
+      <p>
+        Page designed by
+        <a href="https://www.linkedin.com/in/derek-joseph/">Derek Christy</a>
+      </p>
+    </footer>
     <script>
       var us, ds;
-      window.onload = function() {
+      window.onload = function () {
         us = document.getElementById('u_speed');
         ds = document.getElementById('d_speed');
 

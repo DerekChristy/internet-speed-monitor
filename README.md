@@ -1,6 +1,6 @@
 # Internet Speed Monitor
 
-[website](https://derekchristy.github.io/internet-speed-monitor/)
+[Website](https://derekchristy.github.io/internet-speed-monitor/)
 
 ## Run the project
 
